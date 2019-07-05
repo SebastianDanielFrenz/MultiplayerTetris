@@ -1,0 +1,32 @@
+package blocks;
+
+import java.awt.Color;
+
+public class LBlock extends Block {
+
+	@Override
+	public Block TurnRight() {
+		return new LBlock2();
+	}
+
+	@Override
+	public Block TurnLeft() {
+		return new LBlock4();
+	}
+
+	@Override
+	public int[][] GetFallingBlocks() {
+		return new int[][] { { 0, 0 }, { 0, 1 }, { 0, 2 }, { 1, 2 } };
+	}
+
+	@Override
+	public Color GetColor() {
+		return Color.RED;
+	}
+
+	@Override
+	public int GetID() {
+		return 1;
+	}
+
+}
